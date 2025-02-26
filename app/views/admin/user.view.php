@@ -34,7 +34,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                 <th>Name</th>
                 <th>Age</th>
                 <th>Contact Number</th>
-                <th>Email</th>
+                <!-- <th>Email</th> -->
                 <th>Address</th>
                 <th>Status</th>
             </tr>
@@ -46,7 +46,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                     <td><?= $user['name'] ?></td>
                     <td><?= $user['age'] ?></td>
                     <td><?= $user['contact'] ?></td>
-                    <td><?= $user['email'] ?></td>
+                    <!-- <td><?= $user['email'] ?></td> -->
                     <td><?= $user['address'] ?></td>
                     <td><span class="status-user"><?= $user['status'] ?></span></td>
                 </tr>

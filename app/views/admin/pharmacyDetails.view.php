@@ -45,7 +45,7 @@
             <?php if (empty($pharmacy)): ?>
                 <p>No data records found.</p>
             <?php else: ?>
-                <table>
+                <table class="table-container">
                     <thead>
                         <tr>
                             <th>Pharmacy ID</th>
@@ -54,7 +54,7 @@
                             <th>Contact Number</th>
                             <th>License</th>
                             <th>Approved Date</th>
-                            <th>Email</th>
+                            <!-- <th>Email</th> -->
                             <th>Address</th>
                             <th>Status</th>
                             <th>Actions</th>
@@ -70,7 +70,7 @@
                                     <td><?= htmlspecialchars($pharmacy_item->contactNo) ?></td>
                                     <td><?= htmlspecialchars($pharmacy_item->RegNo ?? '') ?></td>
                                     <td><?= htmlspecialchars($pharmacy_item->approvedDate ?? '') ?></td>
-                                    <td><?= htmlspecialchars($pharmacy_item->email ?? '') ?></td>
+                                    <!-- <td><?= htmlspecialchars($pharmacy_item->email ?? '') ?></td> -->
                                     <td><?= htmlspecialchars($pharmacy_item->address) ?></td>
                                     <td class="status statusA"><?= htmlspecialchars($pharmacy_item->status) ?></td>
                                     <td>

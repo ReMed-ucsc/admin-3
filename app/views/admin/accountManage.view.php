@@ -10,17 +10,17 @@ require_once BASE_PATH.'/app/views/inc/navBar.view.php';
     <form class="Form" action="" method="POST">
         <div>
             <label for="name">Name:</label>
-            <input class="Input" type="text" id="name" name="username" placeholder="Enter name" value="<?= htmlspecialchars($admin->username) ?>" required>
+            <input class="Input" type="text" id="name" name="username" placeholder="Enter name" value="<?= htmlspecialchars($data["username"]) ?>" required>
         </div>
 
         <div>
             <label for="email">Email:</label>
-            <input class="Input" type="email" id="email" name="email" placeholder="Enter email" value="<?= htmlspecialchars($admin->email) ?>" required>
+            <input class="Input" type="email" id="email" name="email" placeholder="Enter email" value="<?= htmlspecialchars($data["email"]) ?>" required>
         </div>
 
         <div>
             <label for="password">Password:</label>
-            <input class="Input" type="password" id="password" name="password" placeholder="Enter password" value="<?= htmlspecialchars($admin->password) ?>" required>
+            <input class="Input" type="password" id="password" name="password" placeholder="Enter password" value="<?= htmlspecialchars($data["password"]) ?>" required>
         </div>
 
         <div>

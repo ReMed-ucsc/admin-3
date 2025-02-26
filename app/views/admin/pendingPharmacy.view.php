@@ -28,7 +28,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                     <th>Pharmacist Name</th>
                     <th>Contact Number</th>
                     <th>License</th>
-                    <th>Email</th>
+                    <!-- <th>Email</th> -->
                     <th>Address</th>
                     <th>Status</th>
                     <th>Actions</th>
@@ -43,7 +43,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                             <td><?= htmlspecialchars($pharmacy_items->pharmacistName) ?></td>
                             <td><?= htmlspecialchars($pharmacy_items->contactNo) ?></td>
                             <td><?= htmlspecialchars($pharmacy_items->RegNo ?? '') ?></td>
-                            <td><?= htmlspecialchars($pharmacy_items->email ?? '') ?></td>
+                            <!-- <td><?= htmlspecialchars($pharmacy_items->email ?? '') ?></td> -->
                             <td><?= htmlspecialchars($pharmacy_items->address) ?></td>
                             <td class="status-mark">
                                 <span class="status pending"><?= htmlspecialchars($pharmacy_items->status)?></span>

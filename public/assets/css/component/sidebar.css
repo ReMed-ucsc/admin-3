@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+/* @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900); */
 
 /* Reset CSS */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +10,6 @@
 body {
   background-color: #dbe2f4;
   display: flex;
-  /* flex: 1; */
   flex-direction: column;
   
 }
@@ -19,11 +18,8 @@ body {
   display: flex;
   flex: 1;
   width: 100px;
-  /* background-color: rgba(255, 0, 0, 0.207); */
   width: 100px;
   z-index: 10000000000;
-  /* position: absolute;
-  top: 89.6px; */
 }
 
 .container {
@@ -32,10 +28,8 @@ body {
   width: 0%;
   position: fixed;
   top: 89.6px;
-  /* flex: 1; */
   gap: 0px;
   z-index: 10000000;
-  /* overflow: auto;  */
 }
 
 .sidebar {
@@ -54,11 +48,6 @@ body {
 
   height: calc(100vh - 89.6px);
   z-index: 10000000;
-  
-    /* z-index: 1000;
-    transition: width 0.3s ease; */
-
-
 }
 
 .sidebar .active{
@@ -66,7 +55,7 @@ body {
 }
 
 .content {
-  flex: 1; /* Content will take the remaining space */
+  flex: 1;
   padding: 20px;
   background-color: #9c1717;
   border-radius: 10px;
@@ -253,4 +242,4 @@ body {
   color: #fff;
   text-align: center;
   font-size: 3rem;
-}
+} */

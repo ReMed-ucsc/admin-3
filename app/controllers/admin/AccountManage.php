@@ -17,8 +17,13 @@ class AccountManage
         // show($result);
 
         // $data['username'] = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
+        $admin= new Admin();
+        $Admin=$admin->get_admin();
 
-        $data['username'] = [];
+
+        $data=[
+            'admin'=>$Admin
+        ];
         $this->view('admin/accountManage', $data);
     }
 

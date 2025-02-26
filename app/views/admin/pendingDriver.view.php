@@ -20,7 +20,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                     <th>Driver Name</th>
                     <th>Contact Number</th>
                     <th>Delivery Time</th>
-                    <th>Email</th>
+                    <!-- <th>Email</th> -->
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -33,7 +33,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                             <td><?= htmlspecialchars($driver_details->driverName) ?></td>
                             <td><?= htmlspecialchars($driver_details->telNo) ?></td>
                             <td><?= htmlspecialchars($driver_details->deliveryTime) ?></td>
-                            <td><?= htmlspecialchars($driver_details->email) ?></td>
+                            <!-- <td><?= htmlspecialchars($driver_details->email) ?></td> -->
                             <td class="status-mark">
                                 <span class="status pending">
                                     <?= htmlspecialchars($driver_details->status) ?>
