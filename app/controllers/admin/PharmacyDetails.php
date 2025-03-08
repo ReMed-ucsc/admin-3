@@ -142,4 +142,16 @@ class PharmacyDetails
         redirect('admin/PharmacyDetails');
         exit();
     }
+    public function search()
+    {
+        $pharmacyModel = new Pharmacy();
+        $searchResults = $pharmacyModel->search('APPROVED');
+
+        // Pass the search results to the view
+        $data = [
+            'pharmacy' => $searchResults
+        ];
+
+        $this->view('admin/pharmacyDetails', $data);
+    }
 }

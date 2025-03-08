@@ -5,9 +5,13 @@
     <!-- Search Box Form -->
     <div class="above-table">
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-box" placeholder="Search here...">
-            <img src="<?= ROOT ?>/assets/images/search.png" alt="icon">
-            <!-- <button class="search-button" onclick="performSearch()">Search</button> -->
+            <form id="search-form">
+              <input type="text" name="search" id="searchInput" class="search-box" placeholder="Search here... " value="<?php if(isset($_GET['search'])){echo  htmlspecialchars($_GET['search']);} ?>"  >
+              <!-- <img src="<?= ROOT ?>/assets/images/search.png" alt="icon"> -->
+              <button type="submit" class="search-button" onclick="performSearch()">Search</button>  
+              <!-- <button type="button" class="reset-button" onclick="resetSearch()">Reset</button> -->
+            </form>
+            
         </div>
         <div>
             <a class="add-btn" href="<?= ROOT ?>/admin/newPharmacy/"><img src="<?= ROOT ?>/assets/images/add.png" alt="" style="width:30px; height:auto; margin-right:5px;">Add Pharmacy</a>

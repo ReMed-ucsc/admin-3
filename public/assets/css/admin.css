@@ -1,8 +1,4 @@
-/* pendingPharmacy css */
 .status {
-  padding: 5px 10px;
-  border-radius: 15px;
-  /* color: white; */
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -26,39 +22,8 @@
   text-decoration: none;
 }
 
-/* pharmacyDetails css */
-
-/* table {
-  width: 95%;
-  align-items: center;
-  justify-content: center;
-  border-collapse: collapse;
-  margin-top: 30px;
-}
-
-table tbody tr:hover {
-  background-color: #f5f5f5;
-}
-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-table tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-table thead {
-  background-color: #002b5c;
-  color: white;
-}
-table thead th,td {
-  padding: 15px;
-  text-align: left;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-} */
-
 .statusA {
-  background-color: #e8f5e9;
+  background-color: none;
   color: #2e7d32;
   margin-top: 13px;
   margin-bottom: auto;
@@ -76,7 +41,6 @@ table thead th,td {
   color: #db1515;
 }
 
-/* removePharmacy css */
 select {
   padding: 10px;
   margin: 10px 0;
@@ -85,9 +49,6 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-/* user css */
-
 
 .status-user {
   background-color: #4caf50;
