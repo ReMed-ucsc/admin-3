@@ -7,9 +7,7 @@
         <div class="search-container">
             <form id="search-form">
               <input type="text" name="search" id="searchInput" class="search-box" placeholder="Search here... " value="<?php if(isset($_GET['search'])){echo  htmlspecialchars($_GET['search']);} ?>"  >
-              <!-- <img src="<?= ROOT ?>/assets/images/search.png" alt="icon"> -->
               <button type="submit" class="search-button" onclick="performSearch()">Search</button>  
-              <!-- <button type="button" class="reset-button" onclick="resetSearch()">Reset</button> -->
             </form>
             
         </div>

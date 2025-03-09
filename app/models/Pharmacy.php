@@ -140,13 +140,6 @@ class Pharmacy extends User
         // Default return value if no result is found
         return 0;
     }
-    public function search($status = 'APPROVED') {
-        if (isset($_GET['search'])) {
-            $filtervalues = $_GET['search'];
-            $query = "SELECT * FROM $this->table WHERE status = :status AND (name LIKE :search OR pharmacistName LIKE :search OR RegNo LIKE :search)";
-            return $this->query($query, [':status' => $status, ':search' => "%$filtervalues%"]);
-        }
-        return [];
-    }
+    
 
 }
