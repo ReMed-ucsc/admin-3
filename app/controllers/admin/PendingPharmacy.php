@@ -37,7 +37,7 @@ class PendingPharmacy
                 'status' => 'APPROVED',
                 'document' => $_FILES['document'] ?? null
             ];
-            show($data);
+            // show($data);
             // File upload handling
             if (isset($_FILES['document']) && $_FILES['document']['error'] == UPLOAD_ERR_OK) {
                 $uploadDir = BASE_PATH . '/uploads/license/';
