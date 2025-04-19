@@ -27,15 +27,33 @@ function performSearch() {
   }
 }
 
+// function confirmDelete(deleteUrl) {
+//   const userConfirmed = confirm(
+//     "Are you sure you want to delete this pharmacy?"
+//   );
+//   if (userConfirmed) {
+//     // Redirect to the delete URL
+//     window.location.href = deleteUrl;
+//   } else {
+//     // Reload the page if the user cancels
+//     window.location.reload();
+//   }
+// }
+
+let deleteUrlToGo = "";
+
 function confirmDelete(deleteUrl) {
-  const userConfirmed = confirm(
-    "Are you sure you want to delete this pharmacy?"
-  );
-  if (userConfirmed) {
-    // Redirect to the delete URL
-    window.location.href = deleteUrl;
-  } else {
-    // Reload the page if the user cancels
-    window.location.reload();
-  }
+  deleteUrlToGo = deleteUrl;
+  document.getElementById('customConfirm').style.display = 'block';
 }
+
+// Handle "Yes"
+document.getElementById('confirmYes').addEventListener('click', function () {
+  window.location.href = deleteUrlToGo;
+});
+
+// Handle "No"
+document.getElementById('confirmNo').addEventListener('click', function () {
+  document.getElementById('customConfirm').style.display = 'none';
+});
+
