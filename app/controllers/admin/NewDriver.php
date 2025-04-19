@@ -14,7 +14,7 @@ class NewDriver
                 'deliveryTime' => $_POST['deliveryTime'],
                 'contactNo' => $_POST['contactNo'],
                 'address' => $_POST['address'],
-                'license' => $_POST['license'],
+                'vehicalLicenseNo' => $_POST['vehicalLicenseNo'],
                 'approvedDate' => $_POST['approvedDate'],
                 'email' => $_POST['email'],
                 'status' => $_POST['status'],
