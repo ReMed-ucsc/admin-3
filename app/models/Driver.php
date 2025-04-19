@@ -17,6 +17,8 @@ class Driver extends User
         'telNo',
         'NIC',
         'deliveryTime',
+        'vehicalLicenseNo',
+        'document',
         'status'
     ];
 
