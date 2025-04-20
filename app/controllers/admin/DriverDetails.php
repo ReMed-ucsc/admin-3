@@ -8,7 +8,7 @@ class DriverDetails
         $driver = $driverDetails->getDrivers("APPROVED  ");
 
         $data = [
-            "driver" => $driver,
+            "driver" => $driver
         ];
 
         $this->view('admin/driverDetails', $data);
@@ -108,21 +108,21 @@ class DriverDetails
                 'token' => md5(uniqid()),
                 'fcmToken' => md5(uniqid())
             ];
-            show($data);
+            // show($data);
             // Handle file upload
-            if (isset($_FILES['document']) && $_FILES['document']['error'] == UPLOAD_ERR_OK) {
-                $uploadDir = BASE_PATH . '/uploads/Drivinglicense/';
-                if (!is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0777, true);
-                }
-                $filename = uniqid() . '_' . basename($_FILES['document']['name']);
-                $uploadPath = $uploadDir . $filename;
-                if (move_uploaded_file($_FILES['document']['tmp_name'], $uploadPath)) {
-                    $data['document'] = $filename;
-                } else {
-                    $data['errors']['document'] = 'File upload failed';
-                }
-            }
+            // if (isset($_FILES['document']) && $_FILES['document']['error'] == UPLOAD_ERR_OK) {
+            //     $uploadDir = BASE_PATH . '/uploads/Drivinglicense/';
+            //     if (!is_dir($uploadDir)) {
+            //         mkdir($uploadDir, 0777, true);
+            //     }
+            //     $filename = uniqid() . '_' . basename($_FILES['document']['name']);
+            //     $uploadPath = $uploadDir . $filename;
+            //     if (move_uploaded_file($_FILES['document']['tmp_name'], $uploadPath)) {
+            //         $data['document'] = $filename;
+            //     } else {
+            //         $data['errors']['document'] = 'File upload failed';
+            //     }
+            // }
             
             // Validate and save
             if ($driver->validate($data)) {
