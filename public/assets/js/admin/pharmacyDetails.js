@@ -27,18 +27,7 @@ function performSearch() {
   }
 }
 
-// function confirmDelete(deleteUrl) {
-//   const userConfirmed = confirm(
-//     "Are you sure you want to delete this pharmacy?"
-//   );
-//   if (userConfirmed) {
-//     // Redirect to the delete URL
-//     window.location.href = deleteUrl;
-//   } else {
-//     // Reload the page if the user cancels
-//     window.location.reload();
-//   }
-// }
+
 
 let deleteUrlToGo = "";
 
