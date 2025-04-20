@@ -43,7 +43,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                                     <?= htmlspecialchars($driver_details->status) ?>
                                 </span>
                             </td>
-                            <td><a class="onboard" href="<?=ROOT?>/admin/PendingDriver/OnboardDrivers/<?= htmlspecialchars($driver_details->driverID) ?>">OnBoard</a></td>
+                            <td><a class="onboard" href="<?=ROOT?>/admin/PendingDriver/OnboardDrivers/<?= htmlspecialchars($driver_details->driverId) ?>">OnBoard</a></td>
                         </tr>
                     <?php endif; ?>
                 <?php endforeach; ?>
