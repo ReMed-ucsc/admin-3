@@ -40,26 +40,26 @@ class PendingDriver
                 'vehicalLicenseNo'=>$_POST['vehicalLicenseNo'],
                 'email'=>$_POST['email'],
                 'telNo'=>$_POST['telNo'],
-                'status'=>'APPROVED',
-                'document'=>$_FILES['document']
+                'status'=>'APPROVED'
+                // 'document'=>$_FILES['document']
             ];
-            if (isset($_FILES['document']) && $_FILES['document']['error'] == UPLOAD_ERR_OK) {
-                $uploadDir = BASE_PATH . '/uploads/Drivinglicense/';
-                if (!is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0777, true);
-                }
-                $filename = uniqid() . '_' . basename($_FILES['document']['name']);
-                $uploadPath = $uploadDir . $filename;
-                if (move_uploaded_file($_FILES['document']['tmp_name'], $uploadPath)) {
-                    $data['document'] = $filename;
-                } else {
-                    $data['errors']['document'] = 'File upload failed';
-                }
-            }
+            // if (isset($_FILES['document']) && $_FILES['document']['error'] == UPLOAD_ERR_OK) {
+            //     $uploadDir = BASE_PATH . '/uploads/Drivinglicense/';
+            //     if (!is_dir($uploadDir)) {
+            //         mkdir($uploadDir, 0777, true);
+            //     }
+            //     $filename = uniqid() . '_' . basename($_FILES['document']['name']);
+            //     $uploadPath = $uploadDir . $filename;
+            //     if (move_uploaded_file($_FILES['document']['tmp_name'], $uploadPath)) {
+            //         $data['document'] = $filename;
+            //     } else {
+            //         $data['errors']['document'] = 'File upload failed';
+            //     }
+            // }
 
             if ($driverModel->validate($data)) {
 
-                $driverModel->update($id, $data, 'driverID');
+                $driverModel->update($id, $data, 'driverId');
                 redirect('admin/DriverDetails');
                 exit();
             } else {
