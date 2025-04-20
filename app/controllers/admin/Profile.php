@@ -8,6 +8,7 @@ class Profile
         $id =$this-> getSession("id");
         $username = $this->getSession("username");
         $email = $this->getSession("email");
+        $contactNo = $this->getSession("contactNo");
 
         $adminMOdel = new Admin();
         $admin= $adminMOdel->get_admin();
@@ -16,7 +17,8 @@ class Profile
             'id'=> $id,
             'username'=> $username,
             'email'=> $email,
-            'admin'=> $admin
+            'admin'=> $admin,
+            'contactNo' => $contactNo
         ];
 
 
@@ -38,12 +40,14 @@ class Profile
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = [
                 'username' => $_POST['username'],
-                'email' => $_POST['email']
+                'email' => $_POST['email'],
+                'contactNo' => $_POST['contactNo']
             ];
 
             if (!empty($_POST['password'])) {
                 $data['password'] = $_POST['password'];
             }
+          
 
             if ($adminModel->validate($data)) {
                 if (!empty($data['password'])) {
@@ -58,6 +62,9 @@ class Profile
         }
 
         $this->view('admin/accountManage', $data);
+    }
+    public function legalCreate(){
+        
     }
 
     // add other methods like edit, update, delete, etc.
