@@ -6,7 +6,7 @@ class Driver extends User
 
     protected $table = 'driver';
     protected $allowedColumns = [
-        'DriverID',
+        'driverId',
         'driverName',
         'email',
         'password',
@@ -73,7 +73,7 @@ class Driver extends User
 
     public function getDriverId($driverID)
     {
-        $data = ['driverID' => $driverID];
+        $data = ['driverId' => $driverID];
 
         return $this->first($data, []);
     }
