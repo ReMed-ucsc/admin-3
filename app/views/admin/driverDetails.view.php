@@ -38,7 +38,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                 <?php foreach ($driver as $drivers): ?>
                     <?php if ($drivers): ?>
                         <tr>
-                            <td><?= htmlspecialchars($drivers->driverID) ?></td>
+                            <td><?= htmlspecialchars($drivers->driverId) ?></td>
                             <td><?= htmlspecialchars($drivers->driverName) ?></td>
                             <td><?= htmlspecialchars($drivers->telNo) ?></td>
                             <td><?= htmlspecialchars($drivers->deliveryTime) ?></td>
