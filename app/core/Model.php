@@ -282,7 +282,7 @@ trait Model
         $this->query($query, $data);
         return false;
     }
-
+    
     public function updateWithConditions($data, $conditions)
     {
         // Check if allowed columns are only updated and remove unwanted data
