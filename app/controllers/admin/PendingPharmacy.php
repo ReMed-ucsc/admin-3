@@ -35,7 +35,7 @@ class PendingPharmacy
         $data = [
             'pharmacy' => $pharmacy,
             'notification' => $Msg,
-            'notificationDriver'=>$MsgDriver
+            'notificationDriver' => $MsgDriver
         ];
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,6 +47,8 @@ class PendingPharmacy
                 'email' => $_POST['email'],
                 'address' => $_POST['address'],
                 'status' => 'APPROVED',
+                'notification' => $Msg,
+                'notificationDriver' => $MsgDriver,
                 'document' => $_FILES['document'] ?? null
             ];
             // show($data);

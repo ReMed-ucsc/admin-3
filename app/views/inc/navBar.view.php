@@ -37,7 +37,7 @@
             <?php if (!empty($notificationDriver)): ?>
                 <?php foreach ($notificationDriver as $msgDriver): ?>
                     <?php if ($msgDriver): ?>
-                        <a href="<?= ROOT ?>/admin/PendingDriver/onbordDrivers/<?= htmlspecialchars($msgDriver->driverId) ?>"
+                        <a href="<?= ROOT ?>/admin/PendingDriver/OnboardDrivers/<?= htmlspecialchars($msgDriver->driverId) ?>"
                             class="notifi-link">
                             <?= htmlspecialchars($msgDriver->driverName) ?> is in the waiting queue.
                         </a>
