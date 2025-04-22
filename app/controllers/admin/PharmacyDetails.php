@@ -105,7 +105,9 @@ class PharmacyDetails
                 'address' => $_POST['address'] ?? '',
                 'email' => $_POST['email'] ?? '',
                 'status' => 'APPROVED',
-                'document' => ''
+                'document' => '',
+                'latitude'=>$_POST['latitude'],
+                'longitude'=>$_POST['longitude']
             ];
 
             show($data);
