@@ -82,48 +82,5 @@ class Admin extends User
         }
         return false;
     }
-    //  public function getAdminById($id)
-    // {
-    //     $data = ['id' => $id];
-    //     return $this->first($data, []);
-    // }
-    // public function saveResetToken($userId, $token, $expires)
-    // {
-    //     $data = [
-    //         'token' => $token,
-    //         'token_expiry' => $expires
-    //     ];
-    //     return $this->update($userId, $data, 'id');
-    // }
-
-    // public function isValidResetToken($token)
-    // {
-    //     $sql = "SELECT * FROM $this->table WHERE token = :token AND token_expiry > NOW() LIMIT 1";
-    //     $res = $this->query($sql, ['token' => $token]);
-
-    //     return is_array($res) && count($res) > 0;
-    // }
-    // public function findByResetToken($token)
-    // {
-    //     $sql = "SELECT * FROM $this->table WHERE token = :token AND token_expiry > NOW() LIMIT 1";
-    //     $res = $this->query($sql, ['token' => $token]);
-
-    //     return is_array($res) && count($res) ? $res[0] : false;
-    // }
-    // public function updatePassword($userId, $hashedPassword)
-    // {
-    //     $data = [
-    //         'password' => $hashedPassword,
-    //         'token' => null,
-    //         'token_expiry' => null
-    //     ];
-    //     return $this->update($userId, $data); // assuming update by ID
-    // }
-    // public function clearResetToken($userId)
-    // {
-    //     $data = ['token' => null, 'token_expiry' => null];
-    //     return $this->update($userId, $data);
-    // }
-
 
 }
