@@ -115,6 +115,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php';
                         console.error("Autocomplete's returned place contains no geometry");
                         return;
                     }
+                    
 
                     // Get the location data
                     var lat = place.geometry.location.lat();
