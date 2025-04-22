@@ -140,6 +140,10 @@ class Pharmacy extends User
         // Default return value if no result is found
         return 0;
     }
+    public function notification($status="pending"){
+        $sql="SELECT name , PharmacyID FROM $this->table WHERE status = :status LIMIT 5";
+        return $this->query($sql,['status'=> $status]);
+    }
     
 
 }
