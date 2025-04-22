@@ -12,6 +12,7 @@
 
 <?php
 require_once BASE_PATH . '/app/views/inc/navBar.view.php';
+
 ?>
 
 <body>
