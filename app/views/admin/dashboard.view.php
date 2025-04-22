@@ -27,6 +27,7 @@ require_once BASE_PATH . '/app/views/inc/navBar.view.php' ?>
                 <img src="<?= ROOT ?>/assets/images/computer.png" alt="" />
                 <p>Online Users</p>
                 <h2 id="count"><?= $onlineUsers ?></h2>
+                <p></p>
             </div>
             <div class="card red">
                 <img src="<?= ROOT ?>/assets/images/time-left.png" alt="" />
