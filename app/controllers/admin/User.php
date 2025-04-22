@@ -6,10 +6,17 @@ class User
     public function index()
     {
         $user = new Patient();
+        $msg = new Pharmacy();
+        $driver = new Driver();
+
+        $MsgDriver = $driver->notificationDriver('pending');
+        $Msg = $msg->notification('pending');
         $userModel= $user->getAllPatients();
 
         $data=[
-            'patient'=> $userModel
+            'patient'=> $userModel,
+            'notification' => $Msg,
+            'notificationDriver' => $MsgDriver
         ];
         // var_dump( $data );
         $this->view('admin/user', $data);

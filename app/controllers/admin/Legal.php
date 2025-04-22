@@ -6,27 +6,23 @@ class Legal
     public function index()
     {
         $legal = new LegalModel;
+        $msg = new Pharmacy();
+        $driver = new Driver();
 
+        $MsgDriver = $driver->notificationDriver('pending');
+        $Msg = $msg -> notification('pending');
         $privacyArr = $legal->getPrivacyPolicy();         // returns array
         $termsArr = $legal->getTermsConditions();         // returns array
 
         $privacy = $privacyArr[0]->privacy_policy ?? '';
         $terms = $termsArr[0]->terms_and_conditions ?? '';
-        // $arr['email'] = "name@example.com";
 
-        // $result = $model->where(data_for_filtering, data_not_for_filtering);
-        // $result = $model->insert(insert_data);
-        // $result = $model->update(filtering_data updating_data, id_column_for_filtering);
-        // $result = $model->delete(id, id_column);
-        // $result = $user->findAll();
-
-        // show($result);
-
-        // $data['username'] = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
 
         $data = [
             'privacy' => $privacy,
-            'terms' => $terms
+            'terms' => $terms,
+            'notification' => $Msg,
+            'notificationDriver'=>$MsgDriver
         ];
         $this->view('admin/legal', $data);
     }
@@ -54,7 +50,7 @@ class Legal
         }
 
         // Load edit view
-        $this->view('admin/legalEdit', $data);
+        $this->view('admin/legal', $data);
     }
 
 

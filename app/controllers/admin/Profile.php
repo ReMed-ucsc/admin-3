@@ -11,6 +11,11 @@ class Profile
         $contactNo = $this->getSession("contactNo");
 
         $adminMOdel = new Admin();
+        $msg = new Pharmacy();
+        $driver = new Driver();
+
+        $MsgDriver = $driver->notificationDriver('pending');
+        $Msg = $msg->notification('pending');
         $admin= $adminMOdel->get_admin();
         
         $data=[
@@ -18,7 +23,9 @@ class Profile
             'username'=> $username,
             'email'=> $email,
             'admin'=> $admin,
-            'contactNo' => $contactNo
+            'contactNo' => $contactNo,
+            'notification'=> $Msg,
+            'notificationDriver'=> $MsgDriver
         ];
 
 
@@ -28,6 +35,11 @@ class Profile
         $this->protectRoute();
 
         $adminModel = new Admin();
+        $msg = new Pharmacy();
+        $driver = new Driver();
+
+        $MsgDriver = $driver->notificationDriver('pending');
+        $Msg = $msg->notification('pending');
         $admin = $adminModel->first(['id' => $id]);
 
         if (!$admin) {
@@ -35,7 +47,11 @@ class Profile
             exit();
         }
 
-        $data = ['admin' => $admin];
+        $data = [
+            'admin' => $admin,
+            'notification'=> $Msg,
+            'notificationDriver'=> $MsgDriver
+        ];
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = [
@@ -62,9 +78,6 @@ class Profile
         }
 
         $this->view('admin/accountManage', $data);
-    }
-    public function legalCreate(){
-        
     }
 
     // add other methods like edit, update, delete, etc.

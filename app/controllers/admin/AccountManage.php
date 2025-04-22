@@ -18,11 +18,17 @@ class AccountManage
 
         // $data['username'] = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
         $admin= new Admin();
+        $msg = new Pharmacy();
+        $driver = new Driver();
+        $Msg = $msg->notification("pending");
+        $MsgDriver = $driver->notificationDriver('pending');
         $Admin=$admin->get_admin();
 
 
         $data=[
-            'admin'=>$Admin
+            'admin'=>$Admin,
+            'notification'=>$Msg,
+            'notificationDriver'=>$MsgDriver
         ];
         $this->view('admin/accountManage', $data);
     }

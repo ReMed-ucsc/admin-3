@@ -16,22 +16,29 @@ class Dashboard
 
         $pharmacy = new pharmacy();
         $approvedPharmacy = $pharmacy->getlastId("APPROVED");
-        $pendingPharmacy=$pharmacy->getlastId("PENDING");
+        $pendingPharmacy=$pharmacy->getlastId("pending");
 
         $driver = new Driver();
         $approvedDrivers = $driver->getlastId("APPROVED");
-        $pendingDrivers=$driver->getlastId("PENDING");
+        $pendingDrivers=$driver->getlastId("pending");
          // Debugging step
         // die();
 
         // Get all pharmacies
         $AdminModel = new Admin();
-        $admin = $AdminModel->findAll();
+        
 
+        $Msg = $pharmacy->notification('pending');
+        $MsgDriver = $driver->notificationDriver('pending');
+        $admin = $AdminModel->findAll();
+        
         if ($admin === false) {
             $data['error_message'] = 'Error loading pharmacy data. Please try again later.';
         } else {
-            $data['admin'] = $admin;
+            $data=[
+                'admin'=>$admin,
+                'notification'=>$Msg,
+                'notificationDriver'=> $MsgDriver            ];
         }
         // Pass session data to the view
         $data = [
@@ -42,7 +49,9 @@ class Dashboard
             'approved_pharmacy' => $approvedPharmacy,
             'pending_pharmacy'=>$pendingPharmacy,
             'approved_drivers' => $approvedDrivers,
-            'pending_drivers' => $pendingDrivers
+            'pending_drivers' => $pendingDrivers,
+            'notification'=>$Msg,
+            'notificationDriver'=> $MsgDriver   
         ];
 
         $this->unsetSession('error_message');
@@ -50,5 +59,6 @@ class Dashboard
 
         $this->view('admin/dashboard', $data);
     }
+   
     // add other methods like edit, update, delete, etc.
 }
